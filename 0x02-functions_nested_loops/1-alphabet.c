@@ -1,8 +1,8 @@
-#include"main.h"
+#includemain.h"
 
 /**
- * print_alphabet - print alphabets using _putchar
- *
+* print_alphabet - print alphabets using _putchar
+*
 */
 void print_alphabet(void)
 {
