@@ -3,9 +3,9 @@
 /**
 * print_last_digit  - function to print last digit
 *
-* @n: chack imput of function
+* @n: take imput of function
 *
-* Return: return 0 always  (success)
+* Return: return x
 *
 */
 int print_last_digit(int n)
