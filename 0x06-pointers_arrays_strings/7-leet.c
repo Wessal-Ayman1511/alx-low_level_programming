@@ -23,6 +23,7 @@ char *leet(char *s)
 			s[i] = '7';
 		if (s[i] == 'l' || s[i] == 'L')
 			s[i] = '1';
+		s++;
 	}
 	return (s);
 }
