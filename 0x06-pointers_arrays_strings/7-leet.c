@@ -1,20 +1,20 @@
 #include"main.h"
 #include<string.h>
 /**
-**string_toupper-  changes all lowercase letters of a string to uppercase.
+**leet-  function that encodes a string into 1337.
 *
 * @c: input
 *
-* Return: return(uppercase)
+* Return: return(code)
 */
 char *leet(char *c)
 {
 	char *cp = c;
-	char key[] = {'A', 'E', 'O', 'T', 'L'}
+	char key[] = {'A', 'E', 'O', 'T', 'L'};
 	int value [] = {4, 3, 0, 7, 1};
 	unsigned int i;
 
-	while(*c)
+	while (*c)
 	{
 		for (i = 0; i < sizeof(key) / sizeof(char); i++)
 		{
