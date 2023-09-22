@@ -7,23 +7,21 @@
 *
 * Return: return(uppercase)
 */
-char *leet(char *s)
+char *leet(char *c)
 {
-	int i = 0;
+	char *cp = c;
+	char key[] = {'A', 'E', 'O', 'T', 'L'}
+	int value [] = {4, 3, 0, 7, 1};
+	unsigned int i;
 
-	while (s[i] != '\0')
+	while(*c)
 	{
-		if (s[i] == 'a' || s[i] == 'A')
-			s[i] = '4';
-		if (s[i] == 'e' || s[i] == 'E')
-			s[i] = '3';
-		if (s[i] == 'o' || s[i] == 'O')
-			s[i] = '0';
-		if (s[i] == 't' || s[i] == 'T')
-			s[i] = '7';
-		if (s[i] == 'l' || s[i] == 'L')
-			s[i] = '1';
-		s++;
+		for (i = 0; i < sizeof(key) / sizeof(char); i++)
+		{
+			if (*c == key[i] || *c == key[i] + 32)
+				*c = 48 + value[i];
+			c++;
+		}
 	}
-	return (s);
+	return (cp);
 }
