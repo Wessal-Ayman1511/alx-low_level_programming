@@ -1,13 +1,11 @@
 #include"main.h"
 #include<string.h>
 /**
-*print_diagsums- function that print sumdiag
+*print_diagsums- function that print sum of diagonals
 *
 * @size: input
 *
 * @a: input
-*
-* Return: return(pointer)
 */
 void print_diagsums(int *a, int size)
 {
