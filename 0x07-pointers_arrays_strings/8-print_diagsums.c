@@ -23,6 +23,6 @@ void print_diagsums(int *a, int size)
 				sumr += a[i][j];
 		}
 	}
-	printf("%d, %d", suml, sumr);
+	printf("%d, %d\n", suml, sumr);
 }
 
