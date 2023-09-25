@@ -12,18 +12,18 @@
 char *_strchr(char *s, char c)
 {
 	int i, *p;
-	bool flag = false;
+	int flag = 0;
 
 	for (i = 0 ; i < strlen(s) ; i++)
 	{
 		if (s[i] == c)
 		{
 			p = &s[i];
-			flag = true;
+			flag = 1;
 			break;
 		}
 	}
-	if (flag == true)
+	if (flag == 1)
 		return (p);
 	else
 		return (NULL);
