@@ -6,8 +6,6 @@
 * @to: input
 *
 * @s: input
-*
-* Return: return(pointer)
 */
 void set_string(char **s, char *to)
 {
