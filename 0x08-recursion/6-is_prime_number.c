@@ -14,7 +14,7 @@
 int prime(int i, int n);
 int is_prime_number(int n)
 {
-	return (prime(2, n));
+	return (prime(i, n));
 }
 /**
  * prime- recursive function chacks prime numbers
@@ -25,12 +25,12 @@ int is_prime_number(int n)
  *
  * Return: value
 */
-int prime(int i, int n)
+int prime(int i = n / 2, int n)
 {
 	if (n == i)
 		return (1);
 	else if (n % i == 0)
 		return (0);
 	else
-		return (i++, n);
-}
+		return (i--, n);
+ }
