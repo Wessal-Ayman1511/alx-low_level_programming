@@ -28,6 +28,5 @@ int sqr(int n, int val)
 	else if (val * val < n)
 		return (sqr(n, val - 1));
 	else
-i		return (-1);
+		return (-1);
 }
-
