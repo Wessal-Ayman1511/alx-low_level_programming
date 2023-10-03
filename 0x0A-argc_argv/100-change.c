@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		prints("Error\n");
+		printf("Error\n");
 		return (1);
 	}
 	return (0);
