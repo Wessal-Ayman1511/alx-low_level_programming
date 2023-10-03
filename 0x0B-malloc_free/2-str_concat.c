@@ -9,8 +9,12 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *ptr = malloc(strlen(s2) + strlen(s1) + 1);
-	int i, j = 0,l1 = strlen(s1), l2 = strlen(s2);
+	if (s1 == NULL)
+		s1 = '\0';
+	if (s2 == NULL)
+		s2 = '\0';
+	int i, j = 0, l1 = strlen(s1), l2 = strlen(s2);
+	char *ptr = malloc((l1 + l2) *  sizeof(char) + 1);
 
 	if (ptr == NULL)
 	{
@@ -18,12 +22,14 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		for (i = l1 ; i < l1 + l2 ; i++)
+		for (i = 0 ; i < l1 + l2 ; i++)
 		{
-			s1[i] = s2[j];
-			j++;
+			if (i < l1)
+				ptr[i] = s1[i];
+			else
+				ptr[i] = s2[i - l1];
 		}
-		s1[l1 + l2] = '\0';
-		return (s1);
+		s1[i] = '\0';
+		return (ptr);
 	}
 }
