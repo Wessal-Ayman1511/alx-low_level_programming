@@ -10,7 +10,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr = malloc(strlen(s2) + strlen(s1) + 1);
-	int i, j = 0,l1 = strlen[s1], l2 = strlen[s2];
+	int i, j = 0,l1 = strlen(s1), l2 = strlen(s2);
 
 	if (ptr == NULL)
 	{
