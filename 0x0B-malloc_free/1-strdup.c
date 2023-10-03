@@ -3,7 +3,7 @@
 #include <string.h>
 /**
  * *_strdup- function that  newly allocated space in memory
- * @c: input
+ * @str: input
  * Return: Nothing.
  */
 char *_strdup(char *str)
@@ -11,7 +11,7 @@ char *_strdup(char *str)
 	int i = 0, len = strlen(str);
 	char *ptr = malloc(len);
 
-	if (ptr == 0)
+	if (ptr == 0 || str == NULL)
 	{
 		return (NULL);
 	}
