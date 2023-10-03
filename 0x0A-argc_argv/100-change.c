@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
 	}
 	else
 	{
-		prints("Eroor\n");
+		prints("Error\n");
 		return (1);
 	}
 	return (0);
