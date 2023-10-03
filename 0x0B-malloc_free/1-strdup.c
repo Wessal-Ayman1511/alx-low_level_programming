@@ -9,13 +9,13 @@
 char *_strdup(char *str)
 {
 	int i = 0, len = strlen(str);
+	char *ptr;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	char *ptr = malloc(len * sizeof(*str) + 1);
-
+	ptr = malloc(len * sizeof(*str) + 1);
 	if (ptr == NULL)
 	{
 		return (NULL);
