@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * *create_array - function that create array
  * @c: input
@@ -8,8 +9,8 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	int i = 0;
-	char *ptr =  malloc(size);
+	unsigned int i = 0;
+	char *ptr = (*char)  malloc(size);
 
 	if (size == 0 || ptr == 0)
 	{
