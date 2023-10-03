@@ -1,4 +1,4 @@
-#include"main.h"
+#include <stdio.h>
 
 /**
 * main - entery point
@@ -13,6 +13,7 @@
 int main(int argc, char const *argv[])
 {
 	(void)argc;
+
 	printf("%s\n", argv[0]);
 	return (0);
 }
