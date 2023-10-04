@@ -12,6 +12,7 @@ int **alloc_grid(int width, int height)
 	if (p == NULL || width <= 0 || height <= 0)
 	{
 		return (NULL);
+		free(p);
 	}
 	else
 	{
