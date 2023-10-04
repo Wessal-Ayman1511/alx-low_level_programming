@@ -1,6 +1,19 @@
 #include "main.h"
 #include <string.h>
 /**
+ * _strlen- funcrion that return length of str
+ * @str:input
+ * Return: length
+*/
+int _strlen(char *str)
+{
+	int i = 0;
+
+	for (; str[i] != '\0' ; i++)
+	;
+	return (i);
+}
+/**
  * *argstostr- function concatenates all the arguments of your program.
  * @av: input
  * @ac: input
@@ -16,7 +29,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 	for (; i < ac ; i++, nc++)
-		nc += strlen(av[i]);
+		nc += _strlen(av[i]);
 	s = malloc(sizeof(char) * nc + 1);
 	if (s == 0)
 	{
