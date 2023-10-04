@@ -2,6 +2,21 @@
 #include <stdlib.h>
 #include <string.h>
 /**
+ * len- function that return length of string
+ * @s:input
+ * Return: length
+ */
+int len(char *s)
+{
+	int size = 0;
+
+	for (; s[size] != '\0'; size++)
+	;
+	return (size);
+}
+
+
+/**
  * *str_concat- function that
  * @s2: input
  * @s1: input
@@ -16,8 +31,8 @@ char *str_concat(char *s1, char *s2)
 		s1 = "\0";
 	if (s2 == NULL)
 		s2 = "\0";
-	l1 = strlen(s1);
-	l2 = strlen(s2);
+	l1 = len(s1);
+	l2 = len(s2);
 	ptr = malloc((l1 + l2) *  sizeof(char) + 1);
 
 	if (ptr == 0)
