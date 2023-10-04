@@ -23,7 +23,7 @@ int len(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	int i, l1, l2;
-	char *ptr;
+	char *p;
 
 	if (s1 == NULL)
 		s1 = "\0";
@@ -32,21 +32,21 @@ char *str_concat(char *s1, char *s2)
 
 	l1 = len(s1);
 	l2 = len(s2);
-	ptr = malloc((l1 + l2) *  sizeof(char) + 1);
-	if (ptr == 0)
+	p = malloc((l1 + l2) *  sizeof(char) + 1);
+	if (p == 0)
 	{
 		return (0);
 	}
 	else
 	{
-		for (i = 0 ; i <= l1 + l2 ; i++)
+		for (i = 0 ; i < l1 + l2 ; i++)
 		{
 			if (i < l1)
-				ptr[i] = s1[i];
+				p[i] = s1[i];
 			else
-				ptr[i] = s2[i - l1];
+				p[i] = s2[i - l1];
 		}
 	}
-	s1[i] = '\0';
-	return (ptr);
+	p[i] = '\0';
+	return (p);
 }
