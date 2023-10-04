@@ -1,6 +1,4 @@
-#include "main.h"
-#include <stdlib.h>
-#include <string.h>
+#include "main"
 /**
  * len- function that return length of string
  * @s:input
@@ -31,10 +29,10 @@ char *str_concat(char *s1, char *s2)
 		s1 = "\0";
 	if (s2 == NULL)
 		s2 = "\0";
+
 	l1 = len(s1);
 	l2 = len(s2);
 	ptr = malloc((l1 + l2) *  sizeof(char) + 1);
-
 	if (ptr == 0)
 	{
 		return (0);
