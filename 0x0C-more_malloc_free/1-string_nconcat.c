@@ -40,9 +40,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (i < l1)
 			p[i] = s1[i];
 		else if (i < l1 + n)
-			p[1] = s2[i - l1];
+			p[i] = s2[i - l1];
 	}
 	p[i] = '\0';
 	return (p);
 }
-
