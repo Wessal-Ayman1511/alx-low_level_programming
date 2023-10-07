@@ -6,7 +6,7 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *ptr = malloc(sizeof(unsigned int) * b);
+	unsigned int *ptr = malloc( b);
 
 	if (ptr == 0)
 		exit(98);
