@@ -21,26 +21,26 @@ int _strlen(char *s)
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i = 0;
+	unsigned int i, l;
+	char *p;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	int l1 = _strlen(s1);
-	int l2 = _strlen(s2);
-	char *p = malloc(sizeof(char) * (l1 + n + 1));
+	l = _strlen(s1);
+	p = malloc(sizeof(char) * (l + n + 1));
 
 	if (p == 0)
 	{
 		return (NULL);
 	}
-	for (i = 0 ; i < l1 + n ; i++)
+	for (i = 0 ; i < l + n ; i++)
 	{
-		if (i < l1)
+		if (i < l)
 			p[i] = s1[i];
-		else if (i < l1 + n)
-			p[i] = s2[i - l1];
+		else if (i < l + n)
+			p[i] = s2[i - l];
 	}
 	p[i] = '\0';
 	return (p);
