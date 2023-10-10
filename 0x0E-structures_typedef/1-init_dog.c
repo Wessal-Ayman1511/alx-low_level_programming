@@ -1,4 +1,5 @@
 #include "dog.h"
+
 /**
  * init_dog- function that initialize a variable of type
  * @d: input
@@ -6,7 +7,7 @@
  * @age:input
  * @owner:input
  *
- * Return: 0
+ * Return: void
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
