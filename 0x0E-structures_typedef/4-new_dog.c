@@ -14,10 +14,10 @@ int _len(char *s)
 	return (i);
 }
 /**
- * _copy- function that copy string
+ * _copy - function that copy string
  * @s1:input
  * @s2: input
- * Return : pointer
+ * Return: @s1
 */
 char *_copy(char *s1, char *s2)
 {
@@ -33,7 +33,7 @@ char *_copy(char *s1, char *s2)
  * @name: input
  * @age: input
  * @owner: input
- * Return: struct
+ * Return: 0
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
