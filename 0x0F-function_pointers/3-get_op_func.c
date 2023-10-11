@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 	{
 		if (s && s[0] == ops[j].op[0] && !s[1])
 			return (ops[j].f);
-		i++;
+		j++;
 	}
 	return (NULL);
 }
