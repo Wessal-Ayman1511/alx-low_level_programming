@@ -18,6 +18,6 @@ int main(int argc, char **argv)
 	if (x < 0)
 		printf("Error\n"), exit(2);
 	while (x--)
-		printf("%02hhx%s", *pointer++, x ? " " | "\n");
+		printf("%02hhx%s", *pointer++, x ? " " : "\n");
 	return (0);
 }
