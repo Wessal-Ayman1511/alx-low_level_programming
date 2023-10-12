@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	while (count--)
 	{
-		printf("%s%s", (s = va_arg(ptr, char *)) ? str : "(nil)",
+		printf("%s%s", (s = va_arg(ptr, char *)) ? s : "(nil)",
 				count ? (separator ? separator : "") : "\n");
 	}
 	va_end(ptr);
