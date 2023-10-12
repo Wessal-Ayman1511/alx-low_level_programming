@@ -26,7 +26,7 @@ void print_all(const char * const format, ...)
 		}
 		if (format[i] == 'c')
 		{
-			printf("%c", va_arg(ptr, int));
+			printf("%c", va_arg(ptr, char));
 			flag = 0;
 		}
 		if (format[i] == 's')
