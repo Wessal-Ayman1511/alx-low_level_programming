@@ -40,6 +40,7 @@ void print_all(const char * const format, ...)
 				if (st == NULL)
 					st = "(nil)";
 				printf("%s", st);
+				flag = 0;
 				break;
 			}
 			default:
