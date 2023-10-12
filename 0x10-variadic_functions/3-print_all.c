@@ -6,12 +6,11 @@
 */
 void print_all(const char * const format, ...)
 {
-	int i, flag;
+	int i = 0, flag;
 	char *s;
 	va_list ptr;
 
 	va_start(ptr, format);
-	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == 'i')
@@ -26,7 +25,7 @@ void print_all(const char * const format, ...)
 		}
 		if (format[i] == 'c')
 		{
-			printf("%c", va_arg(ptr, char));
+			printf("%c", va_arg(ptr, int));
 			flag = 0;
 		}
 		if (format[i] == 's')
@@ -36,7 +35,8 @@ void print_all(const char * const format, ...)
 				s = "(nil)";
 			printf("%s", s);
 		}
-		if (format[i] != 'i' && format[i] != 'f' && format[i] != 'c' && format[i] != 's')
+		if (format[i] != 'i' && format[i] != 'f' &&
+		format[i] != 'c' && format[i] != 's')
 		{
 			flag = 1;
 		}
