@@ -3,7 +3,7 @@
  * *get_nodeint_at_index- function that returns the nth node
  * @head: input
  * @index: input
- * Return: void
+ * Return: nth node
 */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
