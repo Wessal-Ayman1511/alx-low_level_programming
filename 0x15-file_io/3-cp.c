@@ -17,23 +17,23 @@ int main(int ac, char **av)
 	char buffer[BUFFER];
 
 	if (ac != 3)
-		dprint(STDERR_FILENO, USAGE), exit(97);
+		dprintf(STDERR_FILENO, USAGE), exit(97);
 	fd1 = open(av[1], O_RDONLY);
 	if (fd1 == -1)
-		dprint(STDERR_FILENO, NOREAD, av[1]), exit(98);
+		dprintf(STDERR_FILENO, NOREAD, av[1]), exit(98);
 	fd2 = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, PERMISSION);
 	if (fd2 == -1)
-		dprint(STDERR_FILENO, NOWRITE, av[2]), exit(99);
+		dprintf(STDERR_FILENO, NOWRITE, av[2]), exit(99);
 	while ((c = read(fd1, buffer, BUFFER)) > 0)
 		if (write(fd2, buffer, c) != c)
-			dprint(STDERR_FILENO, NOWRITE, av[2]), exit(99);
+			dprintf(STDERR_FILENO, NOWRITE, av[2]), exit(99);
 	if (c == -1)
-		dprint(STDERR_FILENO, NOREAD, av[1]), exit(98);
+		dprintf(STDERR_FILENO, NOREAD, av[1]), exit(98);
 	fd1 = close(fd1);
 	fd2 = close(fd2);
 	if (fd1)
-		dprint(STDERR_FILENO, NOCLOSE, fd1), exit(100);
+		dprintf(STDERR_FILENO, NOCLOSE, fd1), exit(100);
 	if (fd2)
-		dprint(STDERR_FILENO, NOCLOSE, fd1), exit(100);
+		dprintf(STDERR_FILENO, NOCLOSE, fd1), exit(100);
 	return (EXIT_SUCCESS);
 }
