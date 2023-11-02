@@ -18,7 +18,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 		dprint(STDERR_FILENO, USAGE), exit(97);
-	fd1 = open(av[2], O_RDONLY);
+	fd1 = open(av[1], O_RDONLY);
 	if (fd1 == -1)
 		dprint(STDERR_FILENO, NOREAD, av[1]), exit(98);
 	fd2 = open(av[2], O_RDONLY | O_TRUNC | O_CREAT, PERMISSION);
