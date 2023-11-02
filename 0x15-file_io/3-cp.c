@@ -21,7 +21,7 @@ int main(int ac, char **av)
 	fd1 = open(av[1], O_RDONLY);
 	if (fd1 == -1)
 		dprint(STDERR_FILENO, NOREAD, av[1]), exit(98);
-	fd2 = open(av[2], O_RDONLY | O_TRUNC | O_CREAT, PERMISSION);
+	fd2 = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, PERMISSION);
 	if (fd2 == -1)
 		dprint(STDERR_FILENO, NOWRITE, av[2]), exit(99);
 	while ((c = read(fd1, buffer, BUFFER)) > 0)
@@ -34,6 +34,6 @@ int main(int ac, char **av)
 	if (fd1)
 		dprint(STDERR_FILENO, NOCLOSE, fd1), exit(100);
 	if (fd2)
-		dprint(STDERR_FILENO, NOCLOSE, fd2), exit(100);
+		dprint(STDERR_FILENO, NOCLOSE, fd1), exit(100);
 	return (EXIT_SUCCESS);
 }
