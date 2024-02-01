@@ -3,6 +3,7 @@
  * *insert_dnodeint_at_index- function that add node
  * @h: input
  * @n: input
+ * @idx: input
  * @idx
  * Return: num of nodes
 */
@@ -22,21 +23,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (NULL);
 		idx--;
 	}
-	if (ptr->next = NULL)
+	if (ptr->next == NULL)
 	{
 		return (add_dnodeint_end(h, n));
 	}
 	tmp = malloc(sizeof(dlistint_t));
 	if (!tmp)
-		return (NULL);	
-	else
-	{
-		tmp->n = n;
-		tmp->prev = ptr;
-		tmp->next = ptr->next;
-		ptr->next->prev = tmp;
-		ptr->next = tmp;
-	}
-	return (tmp);
-	
+		return (NULL);
+
+	tmp->n = n;
+	tmp->prev = ptr;
+	tmp->next = ptr->next;
+	ptr->next->prev = tmp;
+	ptr->next = tmp;
+
+	return (NULL);
 }
