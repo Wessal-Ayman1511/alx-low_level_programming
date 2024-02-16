@@ -1,6 +1,4 @@
 #include "hash_tables.h"
-#include<stdbool.h>
-
 /**
  * hash_table_delete - delete table
  * @ht: input
@@ -21,7 +19,7 @@ void hash_table_delete(hash_table_t *ht)
 			cur = ht->array[i]->next;
 			free(ht->array[i]->value);
 			free(ht->array[i]->key);
-			ht->array = cur;
+			ht->array[i] = cur;
 		}
 	}
 	free(ht->array);
